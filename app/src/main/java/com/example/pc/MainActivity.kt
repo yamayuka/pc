@@ -1,9 +1,12 @@
-package com.example.button
+package com.example.pc
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.example.pc.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,21 +17,22 @@ class MainActivity : AppCompatActivity() {
                 textMessage.setText(R.string.title_home)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
+            R.id.navigation_notification -> {
+                textMessage.setText(R.string.title_notification)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
+            R.id.navigation_favorite -> {
+                textMessage.setText(R.string.title_favorite)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_add -> {
-                textMessage.setText("add")
+            R.id.navigation_mypage -> {
+                textMessage.setText("Mypage")
                 return@OnNavigationItemSelectedListener true
             }
         }
         false
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,4 +42,13 @@ class MainActivity : AppCompatActivity() {
         textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
+
+
+
+    fun createMypage(){
+
+    }
 }
+
+
+
