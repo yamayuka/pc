@@ -4,20 +4,22 @@
     <item
             android:id="@+id/navigation_home"
             android:icon="@drawable/homeicon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:title=""/>
 
     <item
-            android:id="@+id/navigation_dashboard"
+            android:id="@+id/navigation_notification"
             android:icon="@drawable/notificationicon"
             android:title=""/>
 
     <item
-            android:id="@+id/navigation_notifications"
+            android:id="@+id/navigation_favorite"
             android:icon="@drawable/favoriteicon"
             android:title=""/>
 
     <item
-            android:id="@+id/navigation_add"
+            android:id="@+id/navigation_mypage"
             android:icon="@drawable/mypageicon"
             android:title=""/>
 

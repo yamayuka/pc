@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">button</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_add">Add</string>
+    <string name="title_notification">Dashboard</string>
+    <string name="title_favorite">Notifications</string>
+    <string name="title_mypage">Add</string>
 </resources>
