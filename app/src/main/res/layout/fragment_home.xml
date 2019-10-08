@@ -10,7 +10,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="homeだよ"
+            android:text="homeじゃよ"
             android:textSize="32sp"
             android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
