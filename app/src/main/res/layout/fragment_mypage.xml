@@ -6,15 +6,99 @@
                                              android:layout_height="match_parent"
                                              tools:context=".MypageFragment">
 
-    <TextView
-            android:id="@+id/textView"
+    <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="mypageだよ"
-            android:textSize="32sp"
-            android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
-    />
+            tools:context=".MypageActivity" tools:layout_editor_absoluteX="-56dp" tools:layout_editor_absoluteY="75dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+            <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="center"
+                    android:src="@drawable/profile"/>
+
+            <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/profile"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="ID:000000"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            <ImageButton
+                    android:id="@+id/set_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="#00000000"
+                    android:src="@drawable/seticon"/>
+
+            <ImageButton
+                    android:id="@+id/cloth_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000" android:src="@drawable/clothb"/>
+
+            <ImageButton
+                    android:id="@+id/hair_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/cloth_before"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/cloth_before" android:background="#00000000"
+                    android:src="@drawable/hairb"/>
+
+            <ImageButton
+                    android:id="@+id/make_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/hair_before"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/hair_before" android:background="#00000000"
+                    android:src="@drawable/makeb"/>
+
+            <ImageButton
+                    android:id="@+id/aroma_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/make_before"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/make_before" android:background="#00000000"
+                    android:src="@drawable/aromab"/>
+
+
+
+            <ImageButton
+                    android:id="@+id/add_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/addnewfashion"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:layout_below="@+id/cloth_before"
+                    tools:layout_editor_absoluteX="34dp"
+                    tools:layout_editor_absoluteY="321dp"/>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
 
 
 </android.support.constraint.ConstraintLayout>
