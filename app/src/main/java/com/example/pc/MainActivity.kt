@@ -69,9 +69,7 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-    fun createMypage(){
 
-    }
 }
 
 
