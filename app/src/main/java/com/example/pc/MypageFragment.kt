@@ -2,6 +2,8 @@ package com.example.pc
 
 
 import android.app.Activity
+import android.content.ContentResolver
+import android.content.Context
 import android.media.Image
 import android.os.Bundle
 import android.support.annotation.IdRes
@@ -16,19 +18,22 @@ import android.widget.ImageButton
 import android.widget.Toast
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+import android.provider.MediaStore
+import android.graphics.Bitmap
+import android.net.Uri
+import android.provider.MediaStore.Images.Media.getBitmap
+import java.io.IOException
 
 
 class MypageFragment : Fragment(), View.OnClickListener{
 
+    private val READ_REQUEST_CODE =42
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.fragment_mypage)
 
-        //cloth_before.setOnClickListener(this)
-        //hair_before.setOnClickListener(this)
-        //make_before.setOnClickListener(this)
-        //aroma_before.setOnClickListener(this)
 
     }
 
@@ -47,6 +52,24 @@ class MypageFragment : Fragment(), View.OnClickListener{
         hair_before.setOnClickListener(this)
         make_before.setOnClickListener(this)
         aroma_before.setOnClickListener(this)
+        add_button.setOnClickListener(this)
+    }
+
+    //実際の画像(bitmap)の取得
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
+        if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            var uri: Uri?
+            if (resultData != null) {
+                uri = resultData.data
+                try {
+                    val bitmap = getBitmap(getActivity()?.getContentResolver(), uri)
+                    imageView.setImageBitmap(bitmap)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+
+            }
+        }
     }
 
 
@@ -72,6 +95,13 @@ class MypageFragment : Fragment(), View.OnClickListener{
             R.id.aroma_before -> {
                 val aromab = view.findViewById(R.id.aroma_before) as ImageButton
                 aromab.setImageResource(R.drawable.aromaa)
+            }
+            R.id.add_button -> {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+                intent.addCategory(Intent.CATEGORY_OPENABLE)
+
+                intent.type = "image/*"
+                startActivityForResult(intent, READ_REQUEST_CODE)
             }
         }
     }

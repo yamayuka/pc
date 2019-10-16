@@ -2,16 +2,20 @@ package com.example.pc
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.content.ContentResolver
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.example.pc.R
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Context
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textMessage: TextView
+
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
@@ -58,6 +62,7 @@ class MainActivity : AppCompatActivity() {
 */
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
