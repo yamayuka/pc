@@ -2,13 +2,13 @@ package com.example.pc
 
 
 import android.app.Activity
+import android.app.PendingIntent.getActivity
 import android.content.ContentResolver
 import android.content.Context
 import android.media.Image
 import android.os.Bundle
-import android.support.annotation.IdRes
-import android.support.design.widget.Snackbar
-import android.support.v4.app.Fragment
+//import android.support.annotation.IdRes
+//import android.support.design.widget.Snackbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +23,8 @@ import android.provider.MediaStore
 import android.graphics.Bitmap
 import android.net.Uri
 import android.provider.MediaStore.Images.Media.getBitmap
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.fragment.app.Fragment
 import java.io.IOException
 
 
@@ -30,9 +32,17 @@ class MypageFragment : Fragment(), View.OnClickListener{
 
     private val READ_REQUEST_CODE =42
 
+
+
+    //コピー用の配列を用意
+    //var btn = arrayOfNulls<ImageButton>(4)
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.fragment_mypage)
+
+
 
 
     }
@@ -53,12 +63,18 @@ class MypageFragment : Fragment(), View.OnClickListener{
         make_before.setOnClickListener(this)
         aroma_before.setOnClickListener(this)
         add_button.setOnClickListener(this)
+
+
+
+
+
+
     }
 
     //実際の画像(bitmap)の取得
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         if (requestCode == READ_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            var uri: Uri?
+            val uri: Uri?
             if (resultData != null) {
                 uri = resultData.data
                 try {
@@ -76,6 +92,7 @@ class MypageFragment : Fragment(), View.OnClickListener{
 
 //服とかメイクとか選ぶ時のボタン操作
     override fun onClick(view: View) {
+
 
         when (view.id){
             R.id.cloth_before-> {
@@ -105,6 +122,10 @@ class MypageFragment : Fragment(), View.OnClickListener{
             }
         }
     }
+
+
+
+
 
 
 }
