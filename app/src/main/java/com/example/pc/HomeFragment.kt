@@ -12,3 +12,14 @@ class HomeFragment : Fragment(){
         return view
     }
 }
+class Tab1Fragment: Fragment(){
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_tab1,container,false)
+    }
+}
+
+class Tab2Fragment: Fragment(){
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_tab2,container,false)
+    }
+}
