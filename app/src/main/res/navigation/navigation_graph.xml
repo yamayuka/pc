@@ -4,19 +4,19 @@
             android:id="@+id/navigation_graph"
             app:startDestination="@id/navigation_home">
 
-    <fragment android:id="@+id/navigation_home"
+    <custom_fragment android:id="@+id/navigation_home"
               android:name="com.example.pc.HomeFragment"
               android:label="HomeFragment"/>
 
-    <fragment android:id="@+id/navigation_notification"
+    <custom_fragment android:id="@+id/navigation_notification"
               android:name="com.example.pc.NotificationFragment"
               android:label="NotificationFragment"/>
 
-    <fragment android:id="@+id/navigation_favorite"
+    <custom_fragment android:id="@+id/navigation_favorite"
               android:name="com.example.pc.FavoriteFragment"
               android:label="FavoriteFragment"/>
 
-    <fragment android:id="@+id/navigation_mypage"
+    <custom_fragment android:id="@+id/navigation_mypage"
               android:name="com.example.pc.MypageFragment"
               android:label="MypageFragment"/>
 
