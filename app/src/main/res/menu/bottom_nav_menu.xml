@@ -4,8 +4,6 @@
     <item
             android:id="@+id/navigation_home"
             android:icon="@drawable/homeicon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
             android:title=""/>
 
     <item

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".FavoriteFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:text=" "/>
+
+        <ListView
+                android:id="@+id/list_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/TopNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/frame_style"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+        <ImageButton
+                android:id="@+id/cloth_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0fff"
+                android:src="@drawable/clotha"/>
+
+        <ImageButton
+                android:id="@+id/hair_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0fff"
+                android:src="@drawable/haira"/>
+
+        <ImageButton
+                android:id="@+id/make_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0fff"
+                android:src="@drawable/makea"/>
+
+        <ImageButton
+                android:id="@+id/aroma_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#0fff"
+                android:src="@drawable/aromaa"/>
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD ITEM" />
+
+
+</FrameLayout>
